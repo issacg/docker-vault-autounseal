@@ -5,7 +5,7 @@ This is a simple wrapper container for [the official Vault Docker image](https:/
 
 ## How to use
 
-`docker run -e VAULT_UNSEAL_URL=https://somedomain.com/start ...normal vault docker commands...`
+`docker run -e VAULT_UNSEAL_URL=https://somedomain.com/start <normal vault docker parameters> vault-autounseal <vault arguments>`
 
 When a value is supplied for the VAULT_UNSEAL_URL environment variable, a call to wget will be made to that value immediately before starting Vault.  This is intended to be the caller script used to trigger the Authy confirmation [case on the sample code in this Gist](https://gist.github.com/issacg/ea661c6652d00191d1d6f08fc9b38b60)
 
